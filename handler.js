@@ -10,5 +10,5 @@ let connection = mysql.createConnection({ // creating database connection
 
 export const handler = () => {
 
-    return 'Hello World'
+    return 'Hello Worlds'
 }
