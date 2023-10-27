@@ -10,6 +10,22 @@ let connection = mysql.createConnection({ // creating database connection
 
 export const handler = () => {
 
+    connection.connect();
+    connection.query('SELECT * FROM news', function (error, results, fields) {
+        if (error) throw error;
+        console.log('The solution is: ', results[0]);
+    });
+
+    connection.end();
+
+
+
     console.log('Hello world!!!');
-    return 'Hello Worlds'
+
+    let jsonResponse = {"hello":"world"}
+    const response = {
+        statusCode: 200,
+        body: JSON.stringify(jsonResponse),
+    };
+    return response;
 }
