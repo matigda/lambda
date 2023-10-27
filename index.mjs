@@ -17,6 +17,7 @@ export const handler = () => {
     });
 
 
+    connection.end();
 
     console.log('Hello world!!!');
 
