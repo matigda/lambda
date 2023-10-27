@@ -7,10 +7,10 @@ let connection = mysql.createConnection({ // creating database connection
     database : 'dw1'
 })
 
-connection.connect();
 
-export const handler = () => {
+export const handler = async () => {
 
+    connection.connect();
     connection.query('SELECT * FROM news', function (error, results, fields) {
         if (error) throw error;
         console.log('The solution is: ', results[0]);
