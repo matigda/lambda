@@ -10,5 +10,6 @@ let connection = mysql.createConnection({ // creating database connection
 
 export const handler = () => {
 
+    console.log('Hello world!!!');
     return 'Hello Worlds'
 }
