@@ -9,10 +9,6 @@ phases:
       - echo Build started on `date`
       - echo Installing dependencies
       - npm install
-  post_build:
-    commands:
-      - mkdir build-output
-      - cp -R index.js node_modules/ build-output
 artifacts:
   files:
-    - build-output/**/*
+    - ./**/*
