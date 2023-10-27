@@ -12,7 +12,7 @@ phases:
   post_build:
     commands:
       - mkdir build-output
-      - cp -R handler.js node_modules/ build-output
+      - cp -R index.js node_modules/ build-output
 artifacts:
   files:
     - build-output/**/*
